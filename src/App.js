@@ -9,6 +9,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 export default function App() {
   const [repositories, setRepositories] = useState([]);
@@ -79,7 +80,8 @@ export default function App() {
                 style={styles.close}
                 onPress={() => removeRepository(repository.id)}
               >
-                <Text style={styles.closeIcon}>x</Text>
+                <FontAwesome5 style={styles.closeIcon} name={'times-circle'} />
+
               </TouchableOpacity>
 
               <Text style={styles.repository}>{repository.title}</Text>
@@ -142,6 +144,7 @@ const styles = StyleSheet.create({
   repository: {
     fontSize: 32,
     fontWeight: "bold",
+    marginTop: 20,
   },
   techsContainer: {
     flexDirection: "row",
@@ -190,18 +193,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
   },
   close: {
-    alignItems: 'flex-end',
+    borderRadius: 50,
+    position: 'absolute',
+    top: 20,
+    right: 20,
   },
   closeIcon: {
-    height: 20,
-    width: 30,
-    padding: 1,
-    backgroundColor: '#efefef',
-    textAlign: 'center',
-    lineHeight: 15,
-    fontSize: 13,
+    backgroundColor: '#f2f2f2',
+    color: '#fff',
     borderRadius: 50,
-    color: '#999',
-    fontWeight: 'bold',
+    padding: 4,
+    fontSize: 22,
   },
 });
