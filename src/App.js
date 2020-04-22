@@ -20,6 +20,7 @@ export default function App() {
     });
   }, []);
 
+  // add like to repository
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`);
 
@@ -34,6 +35,28 @@ export default function App() {
     });
 
     setRepositories( repositoriesUpdated );
+  }
+
+  // remove like of the repository
+  async function handleDislikeRepository(id) {
+    const response = await api.post(`repositories/${id}/dislike`);
+    
+    const likedRepository = response.data;
+
+    const repositoriesUpdated = repositories.map(repository => {
+      if(repository.id === id) {
+        return likedRepository;
+      } else {
+        return repository;
+      }
+    });
+
+    setRepositories( repositoriesUpdated );
+  }
+
+  // remove the repository
+  async function removeRepository(id) {
+    //////////////////
   }
 
   return (
@@ -65,13 +88,22 @@ export default function App() {
                 </Text>
               </View>
 
-              <TouchableOpacity
-                style={styles.button}
-                onPress={() => handleLikeRepository(repository.id)}
-                testID={`like-button-${repository.id}`}
-                >
-                <Text style={styles.buttonText}>Curtir</Text>
-              </TouchableOpacity>
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => handleLikeRepository(repository.id)}
+                  testID={`like-button-${repository.id}`}
+                  >
+                  <Text style={styles.buttonText}>Curtir</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => handleDislikeRepository(repository.id)}
+                  >
+                  <Text style={[styles.buttonText, styles.dislike]}>Descurtir</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           )}
         />
@@ -121,18 +153,27 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginRight: 10,
   },
-  button: {
+  buttonContainer: {
     marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  button: {
+    width: '48%',
   },
   buttonText: {
     fontSize: 14,
     fontWeight: "bold",
     color: "#fff",
-    backgroundColor: "#7159c1",
     borderRadius: 4,
     padding: 15,
     textAlign: 'center',
     textTransform: 'uppercase',
     letterSpacing: 2,
+    backgroundColor: "#7159c1",
+  },
+  dislike: {
+    backgroundColor: 'red',
   },
 });
