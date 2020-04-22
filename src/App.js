@@ -56,7 +56,13 @@ export default function App() {
 
   // remove the repository
   async function removeRepository(id) {
-    //////////////////
+    await api.delete(`repositories/${id}`);
+
+    const myRepositories = repositories.filter(repository => {
+      return repository.id !== id;
+    });
+
+    setRepositories(myRepositories);
   }
 
   return (
@@ -69,6 +75,13 @@ export default function App() {
           keyExtractor={repository => repository.id}
           renderItem={({ item: repository }) => (
             <View style={styles.repositoryContainer}>
+              <TouchableOpacity
+                style={styles.close}
+                onPress={() => removeRepository(repository.id)}
+              >
+                <Text style={styles.closeIcon}>x</Text>
+              </TouchableOpacity>
+
               <Text style={styles.repository}>{repository.title}</Text>
 
               <View style={styles.techsContainer}>
@@ -175,5 +188,20 @@ const styles = StyleSheet.create({
   },
   dislike: {
     backgroundColor: 'red',
+  },
+  close: {
+    alignItems: 'flex-end',
+  },
+  closeIcon: {
+    height: 20,
+    width: 30,
+    padding: 1,
+    backgroundColor: '#efefef',
+    textAlign: 'center',
+    lineHeight: 15,
+    fontSize: 13,
+    borderRadius: 50,
+    color: '#999',
+    fontWeight: 'bold',
   },
 });
