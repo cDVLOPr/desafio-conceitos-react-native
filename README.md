@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  I developed this challenge for the GoStack course as described 
+  I developed this challenge for the <b>Bootcamp GoStack</b> course as described 
   <a href="https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-conceitos-react-native" target="_blank">RN Challenge</a>. <br/>
   However I put some features like, apply dislik and also delete the card from the repository. <br/>
   I even got excited to do other interactions in the app, but I decided to save energy for another more elaborate development!
@@ -16,11 +16,11 @@
 <br>
 
 <p align="center">
-  <a href="#thechnologies">🛸 Thechnologies</a>
+  <a href="#-thechnologies">🛸 Thechnologies</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#information_source-how-to-use">🤔 How To Use</a>
+  <a href="#-how-to-use">🤔 How To Use</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#contact-section">☎ Contact Section</a>
+  <a href="#-contact-section">☎ Contact Section</a>
 </p>
 
 ### 🛸 Thechnologies
