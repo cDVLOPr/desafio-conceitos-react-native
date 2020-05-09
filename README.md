@@ -1,4 +1,4 @@
-📱 Challenge to add like or dislike on repositories
+<br>
 
 <h1 align="center">
   <img alt="RN Logo" title="RN Logo" src="https://github.com/caiohenrique-developer/desafio-conceitos-react-native/blob/master/assets/react_native-logo.png" width="150px" />
