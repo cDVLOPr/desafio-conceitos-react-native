@@ -1,4 +1,4 @@
-👍 Challenge to add like or dislike on repositories
+📱 Challenge to add like or dislike on repositories
 
 <h1 align="center">
   <img alt="RN Logo" title="RN Logo" src="https://github.com/caiohenrique-developer/desafio-conceitos-react-native/blob/master/assets/react_native-logo.png" width="150px" />
@@ -18,9 +18,9 @@
 <p align="center">
   <a href="#-thechnologies">🛸 Thechnologies</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-how-to-use">🤔 How To Use</a>
+  <a href="#-how-to-use">🤔 How to use</a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-contact-section">☎ Contact Section</a>
+  <a href="#-contact-section">☎ Contact section</a>
 </p>
 
 <br>
@@ -36,7 +36,7 @@
 -  [VS Code](https://code.visualstudio.com/) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 -  [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 
-### 🤔 How To Use
+### 🤔 How to use
 
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/), [Yarn](https://yarnpkg.com/) installed on your computer. From your command line:
 
@@ -90,10 +90,11 @@ $ react-native run-ios
 $ react-native run-android
 ```
 
-### ☎ Contact Section
+### ☎ Contact section
 
-+ In: [Caio Caldas](https://www.linkedin.com/in/caio-caldas-024627171/)
-+ Personal Contact: Message me!
++ In: [Caio Henrique](https://www.linkedin.com/in/caio-caldas-024627171/)
++ E-mail: <a href="mailto:caiohenrique.developer@gmail.com">caiohenrique.developer@gmail.com</a>
++ Personal contact: Message me!
 
 ---
 <p align="center">Done with ♥ by myself :pray:</p>
